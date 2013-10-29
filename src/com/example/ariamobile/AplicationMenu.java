@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class AplicationMenu extends Activity implements View.OnClickListener {
+public class AplicationMenu extends Activity {
 
     public static final String PREFS_NAME = "reservation_file";
     private ListView listview;
@@ -57,23 +57,5 @@ public class AplicationMenu extends Activity implements View.OnClickListener {
         listview.setOnItemClickListener(new OnItemClickListenerListViewItem());
 
     }
-
-
-
-    public void onClick(View v){
-        //respond to clicks
-        /*if(v.getId()==R.id.account_status){
-
-            Intent myIntent = new Intent(account_status.getContext(), AccountStatus.class);
-            startActivityForResult(myIntent, 0);
-
-
-        }*/
-    }
-
-
-
-
-
 
 }

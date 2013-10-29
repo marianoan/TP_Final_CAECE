@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background2"
+                android:layout_gravity="center"
+                android:gravity="top"
+                android:paddingTop="30dip">
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:id="@+id/tableLayout">
+
+
+
+
+
+    <TableRow >
+
+        <TextView android:text="@string/welcome_menu"
+                  android:layout_width="match_parent"
+                  android:textSize="32sp"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:textColor="#FFFFFF"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/welcome_menu"></TextView>
+
+    </TableRow>
+
+    <TableRow android:gravity="center"
+              android:layout_gravity="center_horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" >
+    </TableRow>
+
+    <TableRow android:gravity="center"
+              android:layout_marginTop="100dip"
+              android:layout_gravity="center_horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" >
+
+
+        <Button
+                android:text="@string/make_reservation_button"
+                android:clickable="true"
+                android:id="@+id/scan_button"
+                android:textColor="#ffffff"
+                android:background="#454545"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical|center_horizontal"
+                android:width="200dip"
+                android:height="50dip"></Button>
+    </TableRow>
+
+
+</TableLayout>
+
+</RelativeLayout>

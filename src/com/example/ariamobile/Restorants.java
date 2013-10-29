@@ -1,14 +1,19 @@
 package com.example.ariamobile;
 
 import android.app.Activity;
+import android.app.ExpandableListActivity;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ExpandableListView;
 import android.widget.ProgressBar;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -37,11 +42,12 @@ public class Restorants extends Activity {
     private ProgressBar progressBar;
     private TableLayout table_list;
     private TableLayout table_loading;
-    ExpandableListAdapter listAdapter;
+    RestoExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
     public static final String PREFS_NAME = "reservation_file";
+    //Context restoContext = getApplicationContext();
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,8 +65,9 @@ public class Restorants extends Activity {
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
 
-        listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+        listAdapter = new RestoExpandableListAdapter(this, listDataHeader, listDataChild);
 
+        System.err.println(listAdapter.isChildSelectable(0,0));
         // setting list adapter
         expListView.setAdapter(listAdapter);
         Typeface type = Typeface.createFromAsset(getAssets(),"fonts/Roboto-Thin.ttf");
@@ -73,6 +80,8 @@ public class Restorants extends Activity {
         table_loading.setVisibility(View.VISIBLE);
 
         getRestorants();
+
+
     }
 
     public void getRestorants(){
@@ -113,6 +122,8 @@ public class Restorants extends Activity {
                             table_loading.setVisibility(View.GONE);
                             loading_text.setVisibility(View.GONE);
                             table_list.setVisibility(View.VISIBLE);
+
+
                         } catch (JSONException e) {
                             loading_text.setText(e.getMessage());
                         }
@@ -134,6 +145,7 @@ public class Restorants extends Activity {
             }
         });
     }
+
 
 
 }

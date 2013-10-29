@@ -54,5 +54,12 @@
                 android:theme="@android:style/Theme.NoTitleBar"
                 android:screenOrientation="portrait">
         </activity>
+
+        <activity
+                android:name=".RestorantDetail"
+                android:label="RestorantDetail"
+                android:theme="@android:style/Theme.NoTitleBar"
+                android:screenOrientation="portrait">
+        </activity>
     </application>
 </manifest>

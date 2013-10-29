@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="55dip"
+              android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/lblListItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="65dip"
+            android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
+            android:autoText="true"
+            android:textColor="#FFFFFF"
+            android:background="#07000000"
+            android:focusable="false"/>
+
+    <ImageView
+            android:id="@+id/restoInfo"
+            android:paddingTop="5dp"
+            android:layout_width="55dip"
+            android:layout_height="55dip"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="5dp"
+            android:paddingRight="10dip"
+            android:src="@drawable/info"
+            android:background="#07000000"
+            android:contentDescription="@string/app_name"
+            android:focusable="false"/>
+
+</RelativeLayout>
