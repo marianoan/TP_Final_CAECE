@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background2"
+                android:layout_gravity="center"
+                android:gravity="top"
+                android:paddingTop="30dip">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center">
+
+
+
+
+
+        <TableRow >
+
+            <TextView android:text="@string/welcome_menu"
+                      android:layout_width="match_parent"
+                      android:textSize="32sp"
+                      android:layout_weight="1"
+                      android:gravity="center"
+                      android:textColor="#FFFFFF"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/welcome_menu"></TextView>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_marginTop="15dip"
+                  android:layout_gravity="center_horizontal"
+                  android:gravity="right"
+                  android:background="#ffffff">
+            <ListView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listview"
+                    android:layout_column="1"
+                    android:background="#07000000"
+                    android:childDivider="#cacaca"
+                    android:dividerHeight="1dip"
+                    android:drawSelectorOnTop="false"
+                    android:divider="#454545"
+                    android:minHeight="100dip"/>
+
+
+        </TableRow>
+
+
+    </TableLayout>
+
+</RelativeLayout>
